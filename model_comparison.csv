@@ -1,0 +1,2 @@
+model,group_cv_r2_mean,group_cv_r2_std,test_r2,test_mae_GPa,test_rmse_GPa
+Extra Trees,0.565376,0.049430,0.563975,11.274553,14.856018
