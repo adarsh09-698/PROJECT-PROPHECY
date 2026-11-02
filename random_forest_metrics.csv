@@ -1,0 +1,2 @@
+model,group_cv_r2_mean,group_cv_r2_std,test_r2,test_mae_GPa,test_rmse_GPa
+Random Forest,0.550111,0.089643,0.576738,10.699101,14.636974

@@ -7,6 +7,8 @@ regression model.
 
 - `train_models.py` — preprocessing, grouped cross-validation, training, and
   evaluation script.
+- `train_all_models.py` — optional comparison of nine regression models.
+- `train_random_forest.py` — train and evaluate a Random Forest model.
 - `train.csv` — training data.
 - `test.csv` — held-out evaluation data, including measured `E_GPa` values.
 - `best_model.joblib` — fitted Extra Trees pipeline trained on `train.csv`.
@@ -40,6 +42,25 @@ all training rows and evaluates against the labeled test set.
 
 The run writes or updates `best_model.joblib`, `model_report.md`,
 `model_comparison.csv`, and `test_predictions.csv`.
+
+To compare the candidate models instead, run:
+
+```powershell
+python train_all_models.py
+```
+
+This writes separate `all_models_*` results and `best_model_all_models.joblib`
+so it does not overwrite the Extra Trees-only run.
+
+To train and evaluate a Random Forest model, run:
+
+```powershell
+python train_random_forest.py
+```
+
+It writes `random_forest_model.joblib`, `random_forest_metrics.csv`,
+`random_forest_predictions.csv`, and `random_forest_report.md` without
+overwriting the Extra Trees or all-model outputs.
 
 ## Predict with the saved model
 
